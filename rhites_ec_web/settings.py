@@ -25,7 +25,7 @@ SECRET_KEY = 'w5&z#+w&ur=+e_fhjs#xy7ksc5a*y-&g^4gjc8#5via=c5d%&t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rhites-ec.localhost',]
+ALLOWED_HOSTS = ['rhites-ec.localhost','localhost']
 
 
 # Application definition
@@ -115,3 +115,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 SOURCE_DOC_DIR = os.path.join(BASE_DIR, 'source_doc_storage')
+
+LOGIN_REDIRECT_URL = '/'

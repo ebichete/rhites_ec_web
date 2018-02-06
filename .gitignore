@@ -5,3 +5,5 @@ db.sqlite3
 source_doc_storage/*
 # generated class diagrams
 rhites_ec_web_models*.png
+#vscode
+.vscode
