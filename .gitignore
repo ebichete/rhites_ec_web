@@ -7,3 +7,4 @@ source_doc_storage/*
 rhites_ec_web_models*.png
 #vscode
 .vscode
+local_settings.py

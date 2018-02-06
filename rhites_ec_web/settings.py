@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w5&z#+w&ur=+e_fhjs#xy7ksc5a*y-&g^4gjc8#5via=c5d%&t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
-ALLOWED_HOSTS = ['rhites-ec.localhost','localhost']
+ALLOWED_HOSTS = ['db.rhites-ec.org']
 
 
 # Application definition
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'rhites_ec_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rhitesec',
-        'USER': 'rhitesec',
-        'PASSWORD': 'rhitesec',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
         'ATOMIC_REQUESTS': True,
     },
 }
@@ -117,3 +117,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 SOURCE_DOC_DIR = os.path.join(BASE_DIR, 'source_doc_storage')
 
 LOGIN_REDIRECT_URL = '/'
+
+# Import optional settings
+try:
+    from .local_settings import *
+except ImportError:
+   pass
