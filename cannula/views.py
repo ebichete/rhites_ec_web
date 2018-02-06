@@ -37,7 +37,7 @@ def month2quarter(month_num):
     return ((month_num-1)//3+1)
 
 @login_required
-def ipt_quarterly(request):
+def ipt_quarterly(request, output_format='HTML'):
     ipt_de_names = (
         '105-2.1 A6:First dose IPT (IPT1)',
         '105-2.1 A7:Second dose IPT (IPT2)',
